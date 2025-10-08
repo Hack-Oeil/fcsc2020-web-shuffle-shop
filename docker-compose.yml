@@ -3,4 +3,8 @@ services:
   shuffle-shop:
     image: anssi/fcsc2020-web-shuffle-shop:latest
     ports:
-      - "80:80"
+      - ${PORT}:80
+    environment:
+      - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
+    labels:
+      ho.ctf.cyrhades: "1"
